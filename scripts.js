@@ -16,14 +16,17 @@ fetch(url)
         drinkData["strIngredient4"], drinkData["strIngredient5"], drinkData["strIngredient6"], 
         drinkData["strIngredient7"], drinkData["strIngredient8"], drinkData["strIngredient9"], 
         drinkData["strIngredient10"] ]; 
-
-        for(let ingredient of ingredients) {
-           console.log(ingredient)
-        }
-
-     
         console.log("")
         console.log(drinkName);
+        
+        for(let ingredient of ingredients) {
+         if (ingredient !== null) { 
+            console.log(ingredient)
+        }
+       }
+     
+        
+        
         
         }
     }
