@@ -49,8 +49,12 @@ fetch(url)
         const h1 = document.createElement('h1')
         h1.textContent = drinkName
 
+        const p = document.createElement('p')
+        p.textContent = instructions
+
         container.appendChild(card)
         card.appendChild(h1)
+        card.appendChild(p)
         
         for(let ingredient of ingredients) {
          if (ingredient !== null) { 
