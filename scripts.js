@@ -54,7 +54,14 @@ fetch(url)
 .catch(error => console.log("ERROR"))
 
 
-
+const images = [
+"https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg",
+"https://www.thecocktaildb.com/images/media/drink/bry4qh1582751040.jpg", 
+"https://www.thecocktaildb.com/images/media/drink/loezxn1504373874.jpg",
+"https://www.thecocktaildb.com/images/media/drink/srpxxp1441209622.jpg",
+"https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg",
+"https://www.thecocktaildb.com/images/media/drink/dztcv51598717861.jpg",
+]
 
 
 
