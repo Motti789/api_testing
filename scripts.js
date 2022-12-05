@@ -1,18 +1,11 @@
+const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
+
 const app = document.getElementById("root")
 
 const container = document.createElement('div')
 container.setAttribute('class', 'container')
-
 app.appendChild(container)
 
-
-// const logo = document.createElement('img')
-// logo.src =  "https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg"
-// app.appendChild(logo)
-
-
-
-const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
 
 
 fetch(url)
@@ -33,13 +26,9 @@ fetch(url)
         drinkData["strIngredient4"], drinkData["strIngredient5"], drinkData["strIngredient6"], 
         drinkData["strIngredient7"], drinkData["strIngredient8"], drinkData["strIngredient9"], 
         drinkData["strIngredient10"] ]; 
-        // console.log("")
-        // console.log("Id:",drinkId)
-        // console.log("Name:", drinkName);
-       
-
-        const card = document.createElement('div')
-        card.setAttribute('class', 'card')
+        
+        const card_front = document.createElement('div')
+        card_front.setAttribute('class', 'card_face_front')
 
         const h1 = document.createElement('h1')
         h1.textContent = drinkName
@@ -47,26 +36,61 @@ fetch(url)
         const p1 = document.createElement('p')
         p1.textContent = instructions
 
-        
-
-        container.appendChild(card)
-        card.appendChild(h1)
-        card.appendChild(p1)
-        
-        
+        container.appendChild(card_front)
+        card_front.appendChild(h1)
+        card_front.appendChild(p1)
         
         for(let ingredient of ingredients) {
          if (ingredient !== null) { 
          
             const p2 = document.createElement('p')
             p2.textContent = ingredient
-            card.appendChild(p2)
+            card_front.appendChild(p2)
         }
        }
         }
     }
 })
 .catch(error => console.log("ERROR"))
+
+
+
+
+
+
+
+
+
+// const logo = document.createElement('img')
+// logo.src =  "https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg"
+// app.appendChild(logo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

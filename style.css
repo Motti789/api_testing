@@ -8,7 +8,7 @@
     flex-wrap: wrap;
   }
   
-  .card {
+  /* .card {
     margin: 1rem;
     border: 1px solid gray;
   }
@@ -23,4 +23,4 @@
     .card {
       flex: 1 1 calc(33% - 2rem);
     }
-  }
+  } */
