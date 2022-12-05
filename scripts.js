@@ -50,12 +50,17 @@ fetch(url)
         const h1 = document.createElement('h1')
         h1.textContent = drinkName
 
-        const p = document.createElement('p')
-        p.textContent = instructions
+        const p1 = document.createElement('p')
+        p1.textContent = instructions
+
+        const p2 = document.createElement('p')
+        p2.textContent = ingredients
 
         container.appendChild(card)
         card.appendChild(h1)
-        card.appendChild(p)
+        card.appendChild(p1)
+        card.appendChild(p2)
+        
         
         for(let ingredient of ingredients) {
          if (ingredient !== null) { 
