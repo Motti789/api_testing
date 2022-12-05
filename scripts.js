@@ -4,18 +4,11 @@ const container = document.createElement('div')
 container.setAttribute('class', 'container')
 
 app.appendChild(container)
-console.log(container)
+
 
 // const logo = document.createElement('img')
 // logo.src =  "https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg"
 // app.appendChild(logo)
-console.log(container)
-
-
-
-
-
-
 
 
 
@@ -40,9 +33,10 @@ fetch(url)
         drinkData["strIngredient4"], drinkData["strIngredient5"], drinkData["strIngredient6"], 
         drinkData["strIngredient7"], drinkData["strIngredient8"], drinkData["strIngredient9"], 
         drinkData["strIngredient10"] ]; 
-        console.log("")
-        console.log("Id:",drinkId)
-        console.log("Name:", drinkName);
+        // console.log("")
+        // console.log("Id:",drinkId)
+        // console.log("Name:", drinkName);
+       
 
         const card = document.createElement('div')
         card.setAttribute('class', 'card')
@@ -53,22 +47,22 @@ fetch(url)
         const p1 = document.createElement('p')
         p1.textContent = instructions
 
-        const p2 = document.createElement('p')
-        p2.textContent = ingredients
+        
 
         container.appendChild(card)
         card.appendChild(h1)
         card.appendChild(p1)
-        card.appendChild(p2)
+        
         
         
         for(let ingredient of ingredients) {
          if (ingredient !== null) { 
-            console.log(ingredient)
+         
+            const p2 = document.createElement('p')
+            p2.textContent = ingredient
+            card.appendChild(p2)
         }
        }
-       console.log("Instructions:", instructions)
-     
         }
     }
 })
@@ -79,6 +73,11 @@ fetch(url)
 
 
 
+
+
+
+
+        
 
 
 
