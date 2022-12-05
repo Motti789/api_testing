@@ -54,6 +54,13 @@ fetch(url)
 .catch(error => console.log("ERROR"))
 
 
+
+// const logo = document.createElement('img')
+// logo.src =  "https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg"
+// app.appendChild(logo)
+
+
+
 const images = [
 "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg",
 "https://www.thecocktaildb.com/images/media/drink/bry4qh1582751040.jpg", 
@@ -63,14 +70,19 @@ const images = [
 "https://www.thecocktaildb.com/images/media/drink/dztcv51598717861.jpg",
 ]
 
+for(let image of images) {
+  const pics = document.createElement('img')
+  pics.setAttribute('class', 'drink_img')
+  pics.src = image
+  container.appendChild(pics)
+
+}
 
 
 
 
 
-// const logo = document.createElement('img')
-// logo.src =  "https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg"
-// app.appendChild(logo)
+
 
 
 
