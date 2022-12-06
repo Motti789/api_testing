@@ -71,10 +71,10 @@ const images = [
 ]
 
 for(let image of images) {
-  const pics = document.createElement('img')
-  pics.setAttribute('class', 'drink_img')
-  pics.src = image
-  container.appendChild(pics)
+  const card_back = document.createElement('img')
+  card_back.setAttribute('class', 'drink_img')
+  card_back.src = image
+  container.appendChild(card_back)
 
 }
 
