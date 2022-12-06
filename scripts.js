@@ -78,6 +78,12 @@ for(let image of images) {
 
 }
 
+container.addEventListener('click', flipCard)
+
+function flipCard() {
+    container.classList.toggle("flipCard")
+}
+
 
 
 
