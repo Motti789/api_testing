@@ -6,6 +6,10 @@ const container = document.createElement('div')
 container.setAttribute('class', 'container')
 app.appendChild(container)
 
+const card = document.createElement('div')
+card.setAttribute('class', 'card' )
+container.appendChild(card)
+
 
 
 fetch(url)
@@ -36,7 +40,7 @@ fetch(url)
         const p1 = document.createElement('p')
         p1.textContent = instructions
 
-        container.appendChild(card_back)
+        card.appendChild(card_back)
         card_back.appendChild(h1)
         card_back.appendChild(p1)
         
@@ -71,10 +75,12 @@ const images = [
 ]
 
 for(let image of images) {
-  const card_front = document.createElement('img')
-  card_front.setAttribute('class', 'drink_img')
-  card_front.src = image
-  container.appendChild(card_front)
+  const img = document.createElement('img')
+  const card_front = document.createElement('div')
+  card_front.setAttribute('class', 'card_front')
+  img.src = image
+  card_front.appendChild(img)
+  card.appendChild(card_front)
 
 }
 
