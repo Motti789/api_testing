@@ -27,17 +27,21 @@
 
 body {
     background: white;
+    font-family: sans-serif;
+    
 }
 
 
 #root {
     position: absolute;
+    
     width: 250px;
     height: 320px;
     background: none;
-    top: 50%;
+    top: 30%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-300%, -50%);
+    
 }
 
 .container {
@@ -45,22 +49,28 @@ body {
     width: 100%;
     height: 150%;
     transform-style: preserve-3d;
-    transition: all 0.8s ease;
-}
-
-.card_face_front{
-    position:relative;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background: #ffc728;   
-    color: #000;
-    text-align: center;     
+    transform-origin: center right;
+    transition: transform 1s;
 }
 
 .drink_img{
     position: relative;
-    width: 100%;
+    
+    padding: 10px;
+    width: 150%;
+    height: 100%;
+    backface-visibility: hidden;
+      
+    color: #000;
+        
+     
+}
+
+.card_back{
+    
+    position: relative;
+   
+    width: 150%;
     height: 100%;
     backface-visibility: hidden;
     background: purple;

@@ -27,8 +27,8 @@ fetch(url)
         drinkData["strIngredient7"], drinkData["strIngredient8"], drinkData["strIngredient9"], 
         drinkData["strIngredient10"] ]; 
         
-        const card_front = document.createElement('div')
-        card_front.setAttribute('class', 'card_face_front')
+        const card_back = document.createElement('div')
+        card_back.setAttribute('class', 'card_back')
 
         const h1 = document.createElement('h1')
         h1.textContent = drinkName
@@ -36,16 +36,16 @@ fetch(url)
         const p1 = document.createElement('p')
         p1.textContent = instructions
 
-        container.appendChild(card_front)
-        card_front.appendChild(h1)
-        card_front.appendChild(p1)
+        container.appendChild(card_back)
+        card_back.appendChild(h1)
+        card_back.appendChild(p1)
         
         for(let ingredient of ingredients) {
          if (ingredient !== null) { 
          
             const p2 = document.createElement('p')
             p2.textContent = ingredient
-            card_front.appendChild(p2)
+            card_back.appendChild(p2)
         }
        }
         }
@@ -71,10 +71,10 @@ const images = [
 ]
 
 for(let image of images) {
-  const card_back = document.createElement('img')
-  card_back.setAttribute('class', 'drink_img')
-  card_back.src = image
-  container.appendChild(card_back)
+  const card_front = document.createElement('img')
+  card_front.setAttribute('class', 'drink_img')
+  card_front.src = image
+  container.appendChild(card_front)
 
 }
 
