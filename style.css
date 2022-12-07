@@ -62,16 +62,21 @@ body { font-family: sans-serif; }
   text-align: center;
   font-weight: bold;
   font-size: 20px;
+  bottom: 20px;
   backface-visibility: hidden;
 }
 
-/* .card__face--front {
- background: crimson;
-} */
+.card__face--front {
+    position:absolute
+    
+}
 
 .card__face--back {
+    position: relative;
   background: slateblue;
   transform: rotateY(180deg);
 }
+
+
 
 
