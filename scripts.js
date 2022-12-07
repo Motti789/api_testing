@@ -40,8 +40,8 @@ fetch(url)
         const card_back = document.createElement('div')
         card_back.setAttribute('class', "card__face card__face--back")
 
-        const h1 = document.createElement('h1')
-        h1.textContent = drinkName
+        const h2 = document.createElement('h2')
+        h2.textContent = drinkName
 
         const p1 = document.createElement('p')
         p1.textContent = instructions
@@ -55,7 +55,7 @@ fetch(url)
         
         card.appendChild(card_front)
         card.appendChild(card_back)
-        card_back.appendChild(h1)
+        card_back.appendChild(h2)
         card_back.appendChild(p1)
 
         card.addEventListener('click', flipCard)
