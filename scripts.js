@@ -7,9 +7,7 @@ const container = document.createElement('div')
 container.setAttribute('class', 'container')
 app.appendChild(container)
 
-const card = document.createElement('div')
-card.setAttribute('class', 'card' )
-container.appendChild(card)
+
 
 
 
@@ -33,7 +31,11 @@ fetch(url)
         let ingredients = [drinkData["strIngredient1"], drinkData["strIngredient2"], drinkData["strIngredient3"], 
         drinkData["strIngredient4"], drinkData["strIngredient5"], drinkData["strIngredient6"], 
         drinkData["strIngredient7"], drinkData["strIngredient8"], drinkData["strIngredient9"], 
-        drinkData["strIngredient10"] ]; 
+        drinkData["strIngredient10"] ];
+        
+        const card = document.createElement('div')
+        card.setAttribute('class', 'card' )
+        container.appendChild(card)
         
         const card_back = document.createElement('div')
         card_back.setAttribute('class', "card__face card__face--back")
@@ -55,6 +57,12 @@ fetch(url)
         card.appendChild(card_back)
         card_back.appendChild(h1)
         card_back.appendChild(p1)
+
+        card.addEventListener('click', flipCard)
+
+        function flipCard() {
+            card.classList.toggle("is-flipped")
+        }
         
         for(let ingredient of ingredients) {
          if (ingredient !== null) { 
@@ -72,11 +80,7 @@ fetch(url)
 
 
 
-card.addEventListener('click', flipCard)
 
-function flipCard() {
-    card.classList.toggle("is-flipped")
-}
 
 
 
