@@ -32,7 +32,7 @@ fetch(url)
         drinkData["strIngredient10"] ]; 
         
         const card_back = document.createElement('div')
-        card_back.setAttribute('class', 'card_back')
+        card_back.setAttribute('class', "card__face card__face--back")
 
         const h1 = document.createElement('h1')
         h1.textContent = drinkName
@@ -67,7 +67,7 @@ fetch(url)
 
 const images = [
 "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg",
-"https://www.thecocktaildb.com/images/media/drink/bry4qh1582751040.jpg", 
+"https://www.thecocktaildb.com/images/media/drink/bry4qh1582751040.jpg",
 "https://www.thecocktaildb.com/images/media/drink/loezxn1504373874.jpg",
 "https://www.thecocktaildb.com/images/media/drink/srpxxp1441209622.jpg",
 "https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg",
@@ -77,17 +77,18 @@ const images = [
 for(let image of images) {
   const img = document.createElement('img')
   const card_front = document.createElement('div')
-  card_front.setAttribute('class', 'card_front')
+  card_front.setAttribute('class', "card__face card__face--front")
   img.src = image
+  img.width="350"
   card_front.appendChild(img)
   card.appendChild(card_front)
 
 }
 
-container.addEventListener('click', flipCard)
+card.addEventListener('click', flipCard)
 
 function flipCard() {
-    container.classList.toggle("flipCard")
+    card.classList.toggle("is-flipped")
 }
 
 
