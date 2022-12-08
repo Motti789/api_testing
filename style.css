@@ -41,7 +41,7 @@ body {
   
   color: white;
   text-align: center;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 17px;
   bottom: 20px;
   backface-visibility: hidden;
@@ -59,7 +59,7 @@ body {
 }
 
 .ingredients {
-    font-size: 14px;
+    font-size: 17px;
     list-style-type: none;
 }
 

@@ -53,10 +53,23 @@ fetch(url)
         img.width="400"
         img.height="350"
         card_front.appendChild(img)
+        card_back.appendChild(h2)
+
+        for(let ingredient of ingredients) {
+            if (ingredient !== null) { 
+            
+               const p2 = document.createElement('li')
+               p2.setAttribute('class', 'ingredients' )
+               
+               p2.textContent = ingredient
+               card_back.appendChild(p2)
+               
+           }
+        }
         
         card.appendChild(card_front)
         card.appendChild(card_back)
-        card_back.appendChild(h2)
+        
         card_back.appendChild(p1)
 
         card.addEventListener('click', flipCard)
@@ -65,21 +78,12 @@ fetch(url)
             card.classList.toggle("is-flipped")
         }
         
-        for(let ingredient of ingredients) {
-         if (ingredient !== null) { 
-         
-            const p2 = document.createElement('li')
-            p2.setAttribute('class', 'ingredients' )
-            
-            p2.textContent = ingredient
-            card_back.appendChild(p2)
-            
-        }
+       
         
        }
         }
     }
-})
+)
 .catch(error => console.log("ERROR"))
 
 
