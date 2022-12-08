@@ -50,7 +50,8 @@ fetch(url)
         const card_front = document.createElement('div')
         card_front.setAttribute('class', "card__face card__face--front")
         img.src = image
-        img.width="350"
+        img.width="400"
+        img.height="350"
         card_front.appendChild(img)
         
         card.appendChild(card_front)
@@ -67,10 +68,14 @@ fetch(url)
         for(let ingredient of ingredients) {
          if (ingredient !== null) { 
          
-            const p2 = document.createElement('p')
+            const p2 = document.createElement('li')
+            p2.setAttribute('class', 'ingredients' )
+            
             p2.textContent = ingredient
-            // card_back.appendChild(p2)
+            card_back.appendChild(p2)
+            
         }
+        
        }
         }
     }
