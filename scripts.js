@@ -7,8 +7,13 @@ container.setAttribute('class', 'container')
 app.appendChild(container)
 
 fetch(url)
-.then(resp => 
- resp.json())
+.then(resp => {
+    if(resp.ok) {
+      return resp.json();
+    }
+    throw new Error('Something went wrong')
+})
+
 .then(data => {
     
     for(let drinks in data) {
@@ -68,7 +73,9 @@ fetch(url)
         }
     }
 )
-.catch(error => console.log("ERROR"))
+.catch((error) => {
+    console.log(error)
+  })
 
 
 
