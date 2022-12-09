@@ -9,7 +9,7 @@ app.appendChild(container)
 
 const text = document.createElement('div')
 text.setAttribute('class', 'text')
-text.innerText = "Click On A Pic!"
+text.innerText = "Click on a pic to view!"
 container.appendChild(text)
 
 

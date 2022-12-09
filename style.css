@@ -5,7 +5,8 @@ body {
 }
 
 .container {
-    padding-left: 125px;   
+    
+    padding-left: 250px;   
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
@@ -51,7 +52,7 @@ body {
 .card__face--front {
     
     position:absolute;
-    
+   
 }
 
 .card__face--back {
@@ -67,10 +68,29 @@ body {
 }
 
 
-/* transform: rotate(-90deg); */
+
 
 .text {
+    background-color: rgba(0, 0, 0, 0.564);
     position: absolute;
-    text-align: left;
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    border-style: groove;
+    height: 715px;
+    top: -20px;
+
+    width: min-intrinsic;
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    display: table-caption;
+    display: -ms-grid;
+    -ms-grid-columns: min-content;
+
+
+
+   
+    
 }
 
