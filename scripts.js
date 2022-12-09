@@ -1,4 +1,3 @@
-
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
 
 const app = document.getElementById("root")
@@ -7,14 +6,9 @@ const container = document.createElement('div')
 container.setAttribute('class', 'container')
 app.appendChild(container)
 
-
-
-
-
 fetch(url)
 .then(resp => 
  resp.json())
-
 .then(data => {
     
     for(let drinks in data) {
@@ -25,8 +19,6 @@ fetch(url)
         let drinkId =   drinkData["idDrink"];
         let instructions = drinkData["strInstructions"];
         let image = drinkData["strDrinkThumb"];
-
-        
 
         let ingredients = [drinkData["strIngredient1"], drinkData["strIngredient2"], drinkData["strIngredient3"], 
         drinkData["strIngredient4"], drinkData["strIngredient5"], drinkData["strIngredient6"], 
@@ -42,10 +34,8 @@ fetch(url)
 
         const h2 = document.createElement('h2')
         h2.textContent = drinkName
-
-        const p1 = document.createElement('p')
-        p1.textContent = instructions
-
+        card_back.appendChild(h2)
+         
         const img = document.createElement('img')
         const card_front = document.createElement('div')
         card_front.setAttribute('class', "card__face card__face--front")
@@ -53,8 +43,7 @@ fetch(url)
         img.width="400"
         img.height="350"
         card_front.appendChild(img)
-        card_back.appendChild(h2)
-
+        
         for(let ingredient of ingredients) {
             if (ingredient !== null) { 
             
@@ -63,22 +52,17 @@ fetch(url)
                
                p2.textContent = ingredient
                card_back.appendChild(p2)
-               
            }
         }
         
         card.appendChild(card_front)
         card.appendChild(card_back)
         
+        const p1 = document.createElement('p')
+        p1.textContent = instructions
         card_back.appendChild(p1)
 
-        card.addEventListener('click', flipCard)
-
-        function flipCard() {
-            card.classList.toggle("is-flipped")
-        }
-        
-       
+        card.addEventListener('click', flipCard = () => {card.classList.toggle("is-flipped")})
         
        }
         }
