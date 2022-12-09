@@ -6,6 +6,13 @@ const container = document.createElement('div')
 container.setAttribute('class', 'container')
 app.appendChild(container)
 
+
+const text = document.createElement('div')
+text.setAttribute('class', 'text')
+text.innerText = "Click On A Pic!"
+container.appendChild(text)
+
+
 fetch(url)
 .then(resp => {
     if(resp.ok) {
@@ -18,6 +25,7 @@ fetch(url)
     
     for(let drinks in data) {
         for (let drink in drinks){
+
         let drinkData = data[drinks][drink]
         
         let drinkName = drinkData["strDrink"];
@@ -29,6 +37,7 @@ fetch(url)
         drinkData["strIngredient4"], drinkData["strIngredient5"], drinkData["strIngredient6"], 
         drinkData["strIngredient7"], drinkData["strIngredient8"], drinkData["strIngredient9"], 
         drinkData["strIngredient10"] ];
+
         
         const card = document.createElement('div')
         card.setAttribute('class', 'card' )
