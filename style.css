@@ -1,7 +1,7 @@
 body { 
     font-family: sans-serif; 
     
-   background-color: blue;
+   background-color: rgb(2, 2, 139);
 }
 
 .container {
@@ -59,10 +59,11 @@ body {
 }
 
 .ingredients {
+    
     font-size: 17px;
     list-style-type: none;
 }
 
 
-
+/* transform: rotate(-90deg); */
 
