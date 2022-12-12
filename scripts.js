@@ -29,16 +29,14 @@ fetch(url)
         let drinkData = data[drinks][drink]
         
         let drinkName = drinkData["strDrink"];
-        let drinkId =   drinkData["idDrink"];
-        let instructions = drinkData["strInstructions"];
-        let image = drinkData["strDrinkThumb"];
+        let drinkInstructions = drinkData["strInstructions"];
+        let drinkImage = drinkData["strDrinkThumb"];
 
-        let ingredients = [drinkData["strIngredient1"], drinkData["strIngredient2"], drinkData["strIngredient3"], 
+        let drinkIngredients = [drinkData["strIngredient1"], drinkData["strIngredient2"], drinkData["strIngredient3"], 
         drinkData["strIngredient4"], drinkData["strIngredient5"], drinkData["strIngredient6"], 
         drinkData["strIngredient7"], drinkData["strIngredient8"], drinkData["strIngredient9"], 
         drinkData["strIngredient10"] ];
 
-        
         const card = document.createElement('div')
         card.setAttribute('class', 'card' )
         container.appendChild(card)
@@ -46,35 +44,35 @@ fetch(url)
         const card_back = document.createElement('div')
         card_back.setAttribute('class', "card__face card__face--back")
 
-        const h2 = document.createElement('h2')
-        h2.textContent = drinkName
-        card_back.appendChild(h2)
+        const name = document.createElement('h2')
+        name.textContent = drinkName
+        card_back.appendChild(name)
          
         const img = document.createElement('img')
         const card_front = document.createElement('div')
         card_front.setAttribute('class', "card__face card__face--front")
-        img.src = image
+        img.src = drinkImage
         img.width="400"
         img.height="350"
         card_front.appendChild(img)
         
-        for(let ingredient of ingredients) {
+        for(let ingredient of drinkIngredients) {
             if (ingredient !== null) { 
             
-               const p2 = document.createElement('li')
-               p2.setAttribute('class', 'ingredients' )
+               const ingredients = document.createElement('li')
+               ingredients.setAttribute('class', 'ingredients' )
                
-               p2.textContent = ingredient
-               card_back.appendChild(p2)
+               ingredients.textContent = ingredient
+               card_back.appendChild(ingredients)
            }
         }
         
         card.appendChild(card_front)
         card.appendChild(card_back)
         
-        const p1 = document.createElement('p')
-        p1.textContent = instructions
-        card_back.appendChild(p1)
+        const instructions = document.createElement('p')
+        instructions.textContent = drinkInstructions
+        card_back.appendChild(instructions)
 
         card.addEventListener('click', flipCard = () => {card.classList.toggle("is-flipped")})
         
