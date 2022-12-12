@@ -1,7 +1,6 @@
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita';
 
 const app = document.getElementById("root")
-
 const container = document.createElement('div')
 container.setAttribute('class', 'container')
 app.appendChild(container)
