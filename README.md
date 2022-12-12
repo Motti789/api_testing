@@ -14,4 +14,4 @@ In your terminal open the index.html file either from the terminal with open ind
 
 License:
 ---
-The system is available as open source under the terms of the [MIT License](LICENSE.MD).
+The system is available as open source under the terms of the [MIT License](LICENSE.md).
