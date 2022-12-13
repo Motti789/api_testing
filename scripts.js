@@ -31,6 +31,7 @@ fetch(url)
         let drinkInstructions = drinkData["strInstructions"];
         let drinkImage = drinkData["strDrinkThumb"];
 
+
         let drinkIngredients = [drinkData["strIngredient1"], drinkData["strIngredient2"], drinkData["strIngredient3"], 
         drinkData["strIngredient4"], drinkData["strIngredient5"], drinkData["strIngredient6"], 
         drinkData["strIngredient7"], drinkData["strIngredient8"], drinkData["strIngredient9"], 
