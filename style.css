@@ -4,6 +4,7 @@ body {
    background-color: rgb(2, 2, 139);
 }
 
+
 .container {
     
     padding-left: 250px;   
@@ -49,10 +50,17 @@ body {
   backface-visibility: hidden;
 }
 
-.card__face--front {
-    
+.card__face--front{
     position:absolute;
+    transition: 1s ease;
    
+}
+
+.card__face--front:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1);
+    transform: scale(1.05);
+    transition: 1s ease;
 }
 
 .card__face--back {
@@ -68,11 +76,11 @@ body {
 }
 
 
-
-
 .text {
+    
     background-color: rgba(0, 0, 0, 0.564);
     
+
     position: absolute;
     font-size: 100px;
     color: white;
@@ -80,18 +88,28 @@ body {
     border-style: groove;
     height: 715px;
     top: -20px;
-
-    width: min-intrinsic;
-    width: -webkit-min-content;
-    width: -moz-min-content;
     width: min-content;
     display: table-caption;
     display: -ms-grid;
     -ms-grid-columns: min-content;
 
-
-
-   
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+  
+    animation: blinker 2s linear infinite;
     
 }
+
+
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+
+
+
+  
+
 
