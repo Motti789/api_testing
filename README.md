@@ -1,7 +1,5 @@
 ## api_testing
-api_testing is built with a Javascript frontend. api testing is an app which can be used to:
-
- - View a list of beverages with a list of ingredients and instructions on how to make them.
+api_testing is built with a Javascript frontend. api testing is an app which can be used to view a list of beverages with a list of ingredients and instructions on how to make them.
 
  ## Demo
  [api_testing](https://youtu.be/kdQHq7semt8) 
