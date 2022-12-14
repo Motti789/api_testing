@@ -13,57 +13,56 @@ container.appendChild(text)
 
 
 fetch(url)
-.then(resp => {
-    if(resp.ok) {
-      return resp.json();
+ .then(resp => {
+   if(resp.ok) {
+       return resp.json();
     }
-    throw new Error('Something went wrong')
-})
-
-.then(data => {
+     throw new Error('Something went wrong')
+ })
+ 
+ .then(data => {
     
-    for(let drinks in data) {
-        for (let drink in drinks){
+   for(let drinks in data) {
+     for (let drink in drinks){
 
-        let drinkData = data[drinks][drink]
+       let drinkData = data[drinks][drink]
         
-        let drinkName = drinkData["strDrink"];
-        let drinkInstructions = drinkData["strInstructions"];
-        let drinkImage = drinkData["strDrinkThumb"];
+       let drinkName = drinkData["strDrink"];
+       let drinkInstructions = drinkData["strInstructions"];
+       let drinkImage = drinkData["strDrinkThumb"];
 
+       let drinkIngredients = [drinkData["strIngredient1"], drinkData["strIngredient2"], drinkData["strIngredient3"], 
+       drinkData["strIngredient4"], drinkData["strIngredient5"], drinkData["strIngredient6"], 
+       drinkData["strIngredient7"], drinkData["strIngredient8"], drinkData["strIngredient9"], 
+       drinkData["strIngredient10"] ];
 
-        let drinkIngredients = [drinkData["strIngredient1"], drinkData["strIngredient2"], drinkData["strIngredient3"], 
-        drinkData["strIngredient4"], drinkData["strIngredient5"], drinkData["strIngredient6"], 
-        drinkData["strIngredient7"], drinkData["strIngredient8"], drinkData["strIngredient9"], 
-        drinkData["strIngredient10"] ];
-
-        const card = document.createElement('div')
-        card.setAttribute('class', 'card' )
-        container.appendChild(card)
+       const card = document.createElement('div')
+       card.setAttribute('class', 'card' )
+       container.appendChild(card)
         
-        const card_back = document.createElement('div')
-        card_back.setAttribute('class', "card__face card__face--back")
+       const card_back = document.createElement('div')
+       card_back.setAttribute('class', "card__face card__face--back")
 
-        const name = document.createElement('h2')
-        name.textContent = drinkName
-        card_back.appendChild(name)
+       const name = document.createElement('h2')
+       name.textContent = drinkName
+       card_back.appendChild(name)
          
-        const img = document.createElement('img')
-        const card_front = document.createElement('div')
-        card_front.setAttribute('class', "card__face card__face--front")
-        img.src = drinkImage
-        img.width="400"
-        img.height="350"
-        card_front.appendChild(img)
+       const img = document.createElement('img')
+       const card_front = document.createElement('div')
+       card_front.setAttribute('class', "card__face card__face--front")
+       img.src = drinkImage
+       img.width="400"
+       img.height="350"
+       card_front.appendChild(img)
         
         for(let ingredient of drinkIngredients) {
-            if (ingredient !== null) { 
+          if (ingredient !== null) { 
             
-               const ingredients = document.createElement('li')
-               ingredients.setAttribute('class', 'ingredients' )
-               
-               ingredients.textContent = ingredient
-               card_back.appendChild(ingredients)
+            const ingredients = document.createElement('li')
+            ingredients.setAttribute('class', 'ingredients' )
+            
+            ingredients.textContent = ingredient
+            card_back.appendChild(ingredients)
            }
         }
         
@@ -77,67 +76,10 @@ fetch(url)
         card.addEventListener('click', flipCard = () => {card.classList.toggle("is-flipped")})
         
        }
-        }
+      }
     }
 )
 .catch((error) => {
     console.log(error)
   })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
- 
-    
-
 
